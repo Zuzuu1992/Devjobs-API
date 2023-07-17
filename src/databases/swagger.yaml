@@ -7,8 +7,8 @@ info:
 servers:
   - url: http://localhost:3000/api
     description: local server
-  # - url: https://todo-app-backend-yqqa.onrender.com/api
-  #   description: Web server
+  - url: https://devjobs-api-nu3z.onrender.com/api
+    description: Web server
 paths:
   /jobs:
     get:
