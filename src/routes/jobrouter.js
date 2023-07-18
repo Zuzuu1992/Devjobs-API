@@ -3,6 +3,6 @@ import { getAllJobs } from "../controllers/project-controller.js";
 
 const JobRouter = express.Router();
 
-JobRouter.get("/jobs", getAllJobs);
+JobRouter.get("/jobs/:perPage/:page", getAllJobs);
 
 export default JobRouter;

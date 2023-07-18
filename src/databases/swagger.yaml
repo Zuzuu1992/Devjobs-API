@@ -10,11 +10,26 @@ servers:
   - url: https://devjobs-api-nu3z.onrender.com/api
     description: Web server
 paths:
-  /jobs:
+  /jobs/{perPage}/{page}:
     get:
       tags:
         - Jobs
-      summary: Get all jobs
+      summary: Get specific job information based on pagination
+      parameters:
+        - name: perPage
+          in: path
+          description: Number of jobs per page.
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+        - name: page
+          in: path
+          description: Current page number.
+          required: true
+          schema:
+            type: integer
+            minimum: 1
       responses:
         "200":
           description: Successfully fetched
